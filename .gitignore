@@ -1,0 +1,13 @@
+## OS
+.DS_Store
+
+## IDE
+*.code-workspace
+
+## ENV
+.envrc
+.go-version
+
+**/vendor
+Gopkg.lock
+Gopkg.toml

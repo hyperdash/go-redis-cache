@@ -120,6 +120,11 @@ func (cd *Codec) Get(key string, object interface{}) error {
 	return cd.get(key, object, false)
 }
 
+// GetLocally gets the object for the given key from local cache.
+func (cd *Codec) GetLocally(key string, object interface{}) error {
+	return cd.get(key, object, true)
+}
+
 func (cd *Codec) get(key string, object interface{}, onlyLocalCache bool) error {
 	b, err := cd.getBytes(key, onlyLocalCache)
 	if err != nil {
